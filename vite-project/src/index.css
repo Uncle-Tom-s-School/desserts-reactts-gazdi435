@@ -9,9 +9,75 @@
   --Rose900: hsl(14, 65%, 9%);
 
   color: var(--Rose900);
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
+}
+.cards-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  width: 95%;
+  margin: auto;
+  gap: 20px;
+}
+
+.dessert-card {
+  h2,h4{
+    color: var(--Rose900);
+  }
+
+
+}
+
+.dessert-card>h3{
+  color: var(--Red);
+}
+
+.dessert-card>img{
+  border-radius: 5px;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.add-btn{
+  --height: 55px;
+  height:var(--height);
+  aspect-ratio: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--Red);
+  cursor: pointer;
+  border-radius: calc(var(--height)/2);
+  background-color: white;
+}
+
+.used{
+  padding: 0px 10px;
+  justify-content: space-between;
+  background-color: var(--Red);
+  color: white;
+}
+
+.used>button{
+  height: calc(var(--height)-20px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.dessert-card>.add-btn{
+  position: relative;
+  top: calc(var(--height) / 2 * -1);
+  left: 50%;
+  transform: translate(-50%);
 }
