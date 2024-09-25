@@ -12,7 +12,10 @@ export type DessertCardProp = {
 };
 
 const DessertCard = (props: DessertCardProp) => {
-  return <div>{props.name}</div>;
+  return <div>
+    <h2>{props.name}</h2>
+    <img src={props.image?.desktop} alt="" />
+  </div>
 };
 
 export default DessertCard;
