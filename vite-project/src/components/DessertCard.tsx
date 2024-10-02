@@ -11,10 +11,11 @@ export type DessertCardProp = {
   };
 };
 
+
 const DessertCard = (props: DessertCardProp) => {
   return <div className="dessert-card">
     <img src={props.image?.desktop} alt="" />
-    <AddToCardBtn/>
+    <AddToCardBtn {...props}/>
     <h4>{props.category}</h4>
     <h2>{props.name}</h2>
     <h3>${props.price}</h3>
